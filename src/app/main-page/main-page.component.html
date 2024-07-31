@@ -1,0 +1,28 @@
+
+  <!---------------
+  @for (post of posts; track $index) {
+      <div class="post-container">
+          <div class="post-name">{{ $index }}: {{ post.name }}</div>
+          <div class="post-image-container">
+              <img src="{{ post.Image }}" alt="{{ post.name }}" class="post-image">
+              <div class="post-likes">
+                  
+                <img src="@if (post.liked) '/assets/img/heart-red.png' else '/assets/img/heart-black.png'" alt="Heart Icon">
+
+                 
+              </div>
+          </div>
+      </div>
+  }-------->
+  @for (post of posts; track $index) {
+    <div>{{ post.name }}</div>
+    <img class="image" src="{{ post.image }}" alt="">
+    <div>{{ post.likes }}</div>
+    @if (post.isLiked) {
+      <img (click)="toggleLike($index)" src="./assets/img/heart-red.png" alt="">
+    } @else {
+      <img (click)="toggleLike($index)" src="./assets/img/heart-black.png" alt="">
+    }
+  }
+  <a [routerLink]="['/contact']">zu Contact Link</a>
+  

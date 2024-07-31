@@ -1,0 +1,42 @@
+// main-page.component.scss
+
+// Stylizacja dla kontenera posta
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Elementy wyrównane do lewej strony */
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Stylizacja dla nazwy posta
+.post-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+// Stylizacja dla kontenera obrazka i lajków
+.post-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Elementy wyrównane do lewej strony */
+}
+
+// Stylizacja dla obrazu
+.post-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;  // Zapewnia, że obrazek zachowuje proporcje i wypełnia obszar
+    border-radius: 5px;
+    margin-bottom: 5px; /* Dodanie odstępu między obrazkiem a liczbą lajków */
+}
+
+// Stylizacja dla liczby lajków
+.post-likes {
+    font-size: 1em;
+    color: #777;
+    text-align: left;
+}
+
